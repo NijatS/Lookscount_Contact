@@ -1,0 +1,10 @@
+@mixin buttons_form($background_color, $color) {
+  background-color: $background_color;
+  color: $color;
+  :hover {
+    color: $background_color;
+    background-color: $color;
+    transform: scale(1.1);
+    border-color: $background_color;
+  }
+}
