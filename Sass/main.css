@@ -85,6 +85,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -221,20 +222,23 @@ nav {
   margin: auto;
 }
 
-.welcome_container {
+.welcome {
+  background-color: #f8f9fb;
+}
+.welcome .welcome_container {
   padding: 80px 30px 92px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.welcome_container .welcome_text {
+.welcome .welcome_container .welcome_text {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   width: 640px;
 }
-.welcome_container .welcome_text p {
+.welcome .welcome_container .welcome_text p {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
@@ -242,11 +246,76 @@ nav {
   letter-spacing: -0.1px;
   color: #437ef7;
 }
-.welcome_container .welcome_text h1 {
+.welcome .welcome_container .welcome_text h1 {
   font-weight: 700;
   font-size: 52px;
   line-height: 60px;
   text-align: center;
   letter-spacing: -0.01em;
   color: #272d37;
+}
+.welcome .welcome_container .welcome_text h1 > span {
+  display: none;
+}
+
+.cards {
+  padding: 64px 0px;
+}
+.cards .cards_container {
+  display: flex;
+  padding: 0px 32px;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.cards .cards_container .card {
+  transition: 0.3s;
+  width: 384px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px;
+  gap: 24px;
+  border: 1px solid #eaebf0;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cards .cards_container .card:first-child {
+  height: 182px;
+}
+.cards .cards_container .card .head {
+  display: flex;
+  justify-content: space-between;
+}
+.cards .cards_container .card .head > button {
+  background-color: #ffffff;
+  color: #272d37;
+  border-color: #dae0e6;
+}
+.cards .cards_container .card .head > button:hover {
+  color: #ffffff;
+  background-color: #272d37;
+  transform: scale(1.1);
+  border-color: #ffffff;
+}
+.cards .cards_container .card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cards .cards_container .card .text h2 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  color: #272d37;
+}
+.cards .cards_container .card .text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color: #5f6d7e;
+}
+.cards .cards_container .card:hover {
+  transform: scale(1.1);
 }

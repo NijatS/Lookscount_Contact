@@ -1,34 +1,89 @@
+@import "../utils/mixins";
 .container {
   padding: 0px 32px;
   width: 1280px;
   margin: auto;
 }
-.welcome_container {
-  padding: 80px 30px 92px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .welcome_text {
+.welcome {
+  background-color: $background_neutral;
+  .welcome_container {
+    padding: 80px 30px 92px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 16px;
-    width: 640px;
-    p {
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 20px;
-      text-align: center;
-      letter-spacing: -0.1px;
-      color: $text_blue;
+    .welcome_text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      width: 640px;
+      p {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: -0.1px;
+        color: $text_blue;
+      }
+      h1 {
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: $text_gray;
+        & > span {
+          display: none;
+        }
+      }
     }
-    h1 {
-      font-weight: 700;
-      font-size: 52px;
-      line-height: 60px;
-      text-align: center;
-      letter-spacing: -0.01em;
-      color: $text_gray;
+  }
+}
+.cards {
+  padding: 64px 0px;
+  .cards_container {
+    display: flex;
+    padding: 0px 32px;
+    gap: 32px;
+    flex-wrap: wrap;
+    .card {
+      &:first-child {
+        height: 182px;
+      }
+      transition: 0.3s;
+      width: 384px;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 32px;
+      gap: 24px;
+      border: 1px solid $card_border;
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+      border-radius: 5px;
+      cursor: pointer;
+      .head {
+        display: flex;
+        justify-content: space-between;
+        & > button {
+          @include buttons_form($white, $text_gray);
+          border-color: $button_border_gray;
+        }
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        h2 {
+          @include HeadlineXS;
+          color: $text_gray;
+        }
+        p {
+          @include TextL;
+          color: $text_gray_50;
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
