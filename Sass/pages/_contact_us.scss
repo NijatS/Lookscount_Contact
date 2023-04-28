@@ -87,3 +87,62 @@
     }
   }
 }
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .message_container {
+    margin: 64px 0;
+    padding: 0px 32px;
+    .submit {
+      background-color: $background_neutral;
+      padding: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      .input {
+        width: 564px;
+        height: 74px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        label {
+          @include TextS;
+          color: $text_gray;
+        }
+      }
+      .message_input {
+        box-sizing: border-box;
+        width: 1152px;
+        height: 175px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        & > #message_input_text {
+          max-width: 1152px;
+        }
+      }
+      .agree {
+        display: flex;
+        gap: 12px;
+        input {
+          width: 20px;
+          height: 20px;
+          border: 2px solid #dae0e6;
+          border-radius: 5px;
+        }
+        label {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -0.1px;
+          color: $text_gray;
+          width: 1120px;
+        }
+      }
+      button {
+        @include buttons_form($button_blue_colors, $white);
+      }
+    }
+  }
+}
