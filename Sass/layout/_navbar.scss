@@ -1,0 +1,61 @@
+@import "../utils/mixins";
+nav {
+  border-bottom: 1px solid #eaebf0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.container {
+  padding: 0px 32px;
+  width: 1280px;
+  margin: auto;
+}
+.navbar_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .left_side_navbar {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    .navbar_links {
+      width: 411px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      a {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 22px;
+        color: #272d37;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .right_side_navbar {
+    display: flex;
+    column-gap: 24px;
+    button {
+      &:first-child {
+        color: $button_blue_colors;
+        background-color: transparent;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        box-shadow: none;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      &:nth-child(2) {
+        @include buttons_form($button_blue_colors, $white);
+      }
+    }
+    img {
+      display: none;
+    }
+  }
+}
