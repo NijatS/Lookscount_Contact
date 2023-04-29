@@ -22,13 +22,15 @@
         color: $text_blue;
       }
       h1 {
+        width: 580px;
         font-weight: 700;
         font-size: 52px;
         line-height: 60px;
         text-align: center;
         letter-spacing: -0.01em;
         color: $text_gray;
-        & > span {
+        & > span:first-child,
+        :last-child {
           display: none;
         }
       }
@@ -43,9 +45,15 @@
       height: 196px;
       padding: 0;
       .welcome_text {
+        width: 672px;
         h1 {
-          span {
+          width: 672px;
+          span:first-child,
+          :last-child {
             display: initial;
+          }
+          span:nth-child(2) {
+            display: none;
           }
         }
       }
@@ -60,6 +68,7 @@
       height: 184px;
       .welcome_text {
         h1 {
+          width: 343px;
           @include HeadlinexL;
         }
       }
@@ -174,6 +183,17 @@
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
+      input,
+      select,
+      textarea {
+        transition: 0.3s;
+        &:hover {
+          border-color: black;
+        }
+        &:focus {
+          transform: scale(1.04);
+        }
+      }
       .input {
         width: 564px;
         height: 74px;
@@ -184,6 +204,13 @@
           @include TextS;
           color: $text_gray;
         }
+        select {
+          appearance: none;
+          background-image: url("..//Images/Icons/dropdown.svg");
+          background-position: right 15px center;
+          background-repeat: no-repeat;
+          background-size: auto 15%;
+        }
       }
       .message_input {
         box-sizing: border-box;
@@ -192,8 +219,11 @@
         display: flex;
         flex-direction: column;
         row-gap: 8px;
-        & > #message_input_text {
-          max-width: 1152px;
+        & > textarea {
+          box-sizing: border-box;
+          width: 1152px;
+          height: 147px;
+          resize: none;
         }
       }
       .agree {
@@ -236,6 +266,7 @@
           width: 640px;
           textarea {
             width: 640px;
+            height: 147px;
           }
         }
         .agree {
@@ -267,6 +298,7 @@
           width: 343px;
           textarea {
             width: 343px;
+            height: 145px;
           }
         }
         .agree {

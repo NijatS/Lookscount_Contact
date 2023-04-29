@@ -520,6 +520,7 @@ footer .footer_container > div .bottom div .icons_bottom {
   color: #437ef7;
 }
 .welcome .welcome_container .welcome_text h1 {
+  width: 580px;
   font-weight: 700;
   font-size: 52px;
   line-height: 60px;
@@ -527,7 +528,8 @@ footer .footer_container > div .bottom div .icons_bottom {
   letter-spacing: -0.01em;
   color: #272d37;
 }
-.welcome .welcome_container .welcome_text h1 > span {
+.welcome .welcome_container .welcome_text h1 > span:first-child,
+.welcome .welcome_container .welcome_text h1 :last-child {
   display: none;
 }
 
@@ -540,8 +542,18 @@ footer .footer_container > div .bottom div .icons_bottom {
     height: 196px;
     padding: 0;
   }
-  .welcome .welcome_container .welcome_text h1 span {
+  .welcome .welcome_container .welcome_text {
+    width: 672px;
+  }
+  .welcome .welcome_container .welcome_text h1 {
+    width: 672px;
+  }
+  .welcome .welcome_container .welcome_text h1 span:first-child,
+  .welcome .welcome_container .welcome_text h1 :last-child {
     display: initial;
+  }
+  .welcome .welcome_container .welcome_text h1 span:nth-child(2) {
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
@@ -553,6 +565,7 @@ footer .footer_container > div .bottom div .icons_bottom {
     height: 184px;
   }
   .welcome .welcome_container .welcome_text h1 {
+    width: 343px;
     font-weight: 600;
     font-size: 36px;
     line-height: 44px;
@@ -678,6 +691,21 @@ footer .footer_container > div .bottom div .icons_bottom {
   flex-wrap: wrap;
   gap: 24px;
 }
+.message .message_container .submit input,
+.message .message_container .submit select,
+.message .message_container .submit textarea {
+  transition: 0.3s;
+}
+.message .message_container .submit input:hover,
+.message .message_container .submit select:hover,
+.message .message_container .submit textarea:hover {
+  border-color: black;
+}
+.message .message_container .submit input:focus,
+.message .message_container .submit select:focus,
+.message .message_container .submit textarea:focus {
+  transform: scale(1.04);
+}
 .message .message_container .submit .input {
   width: 564px;
   height: 74px;
@@ -692,6 +720,15 @@ footer .footer_container > div .bottom div .icons_bottom {
   letter-spacing: -0.1px;
   color: #272d37;
 }
+.message .message_container .submit .input select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("..//Images/Icons/dropdown.svg");
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  background-size: auto 15%;
+}
 .message .message_container .submit .message_input {
   box-sizing: border-box;
   width: 1152px;
@@ -700,8 +737,11 @@ footer .footer_container > div .bottom div .icons_bottom {
   flex-direction: column;
   row-gap: 8px;
 }
-.message .message_container .submit .message_input > #message_input_text {
-  max-width: 1152px;
+.message .message_container .submit .message_input > textarea {
+  box-sizing: border-box;
+  width: 1152px;
+  height: 147px;
+  resize: none;
 }
 .message .message_container .submit .agree {
   display: flex;
@@ -752,6 +792,7 @@ footer .footer_container > div .bottom div .icons_bottom {
   }
   .message .message_container .submit .message_input textarea {
     width: 640px;
+    height: 147px;
   }
   .message .message_container .submit .agree label {
     width: 608px;
@@ -781,6 +822,7 @@ footer .footer_container > div .bottom div .icons_bottom {
   }
   .message .message_container .submit .message_input textarea {
     width: 343px;
+    height: 145px;
   }
   .message .message_container .submit .agree label {
     width: 311px;
