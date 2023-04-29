@@ -65,6 +65,16 @@ footer {
           height: 180px;
           display: none;
         }
+        & > div:nth-child(4) {
+          & > ul:last-child {
+            display: none;
+          }
+        }
+        & > div:last-child {
+          & > ul:last-child {
+            display: none;
+          }
+        }
       }
       .bottom {
         width: 1280px;
@@ -108,8 +118,31 @@ footer {
           & > div:nth-child(2) {
             display: flex;
           }
+          & > div:nth-child(3) {
+            ul {
+              & > li:nth-child(2) {
+                display: none;
+              }
+            }
+          }
+          & > div:nth-child(4) {
+            & > ul:nth-child(2) {
+              display: none;
+            }
+            & > ul:last-child {
+              display: flex;
+            }
+          }
           & > div:nth-child(5) {
             display: none;
+          }
+          & > div:last-child {
+            & > ul:nth-child(2) {
+              display: none;
+            }
+            & > ul:last-child {
+              display: flex;
+            }
           }
           .lists {
             width: 192px;
@@ -133,6 +166,76 @@ footer {
                   height: 24px;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 32px 16px;
+    .footer_container {
+      & > div {
+        width: 343px;
+        gap: 24px;
+        .top {
+          row-gap: 24px;
+          column-gap: 50px;
+          & > div:first-child {
+            width: 343px;
+            p {
+              width: 343px;
+            }
+            .icons {
+              display: flex;
+              justify-content: space-around;
+            }
+          }
+          & > div:nth-child(2) {
+            display: none;
+          }
+          & > div:nth-child(3) {
+            ul {
+              & > li:nth-child(2) {
+                display: initial;
+              }
+            }
+          }
+          & > div:nth-child(4) {
+            & > ul:nth-child(2) {
+              display: flex;
+            }
+            & > ul:last-child {
+              display: none;
+            }
+          }
+          & > div:nth-child(5) {
+            display: flex;
+          }
+          & > div:last-child {
+            & > ul:nth-child(2) {
+              display: flex;
+            }
+            & > ul:last-child {
+              display: none;
+            }
+          }
+          .lists {
+            width: 146px;
+          }
+        }
+        .bottom {
+          width: 343px;
+          gap: 8px;
+          & > div {
+            justify-content: center;
+            p {
+              @include TextL;
+            }
+            .icons_bottom {
+              display: none;
             }
           }
         }

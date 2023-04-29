@@ -52,6 +52,20 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .welcome {
+    padding: 32px 16px 40px;
+    .welcome_container {
+      width: 343px;
+      height: 184px;
+      .welcome_text {
+        h1 {
+          @include HeadlinexL;
+        }
+      }
+    }
+  }
+}
 .cards {
   padding: 64px 0px;
   .cards_container {
@@ -63,6 +77,11 @@
     .card {
       &:first-child {
         height: 182px;
+        .text {
+          & > p:last-child {
+            display: none;
+          }
+        }
       }
       transition: 0.3s;
       width: 384px;
@@ -105,11 +124,39 @@
   .cards {
     padding: 40px 32px;
     .cards_container {
-      width: 100%;
       gap: 24px;
       padding: 0;
+      width: 704px;
       .card {
         width: 340px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .cards {
+    padding: 32px 16px;
+    .cards_container {
+      gap: 16px;
+      width: 343px;
+      .card {
+        width: 343px;
+        height: 180px;
+        padding: 16px;
+        gap: 16px;
+        &:first-child {
+          .text {
+            & > p:nth-child(2) {
+              display: none;
+            }
+            & > p:last-child {
+              display: initial;
+            }
+          }
+        }
+        &:last-child {
+          display: none;
+        }
       }
     }
   }
@@ -187,11 +234,49 @@
         }
         .message_input {
           width: 640px;
+          textarea {
+            width: 640px;
+          }
         }
         .agree {
           label {
             width: 608px;
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .message {
+    padding: 40px 0;
+    .message_container {
+      padding: 0;
+      margin: 0;
+      .submit {
+        padding: 0;
+        width: 100%;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .input {
+          width: 343px;
+        }
+        .message_input {
+          width: 343px;
+          textarea {
+            width: 343px;
+          }
+        }
+        .agree {
+          label {
+            width: 311px;
+          }
+        }
+        button {
+          width: 343px;
+          justify-content: center;
         }
       }
     }
@@ -262,6 +347,34 @@
         }
         & > img:last-child {
           display: initial;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .leftToRight {
+    padding: 32px 16px;
+    .leftTo_container {
+      gap: 32px;
+      .left_side {
+        .textLeft {
+          width: 343px;
+          h2 {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 36px;
+            letter-spacing: -0.02em;
+          }
+        }
+      }
+      .right_side {
+        & > img:first-child {
+          display: initial;
+          width: 343px;
+        }
+        & > img:last-child {
+          display: none;
         }
       }
     }
