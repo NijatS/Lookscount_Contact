@@ -524,6 +524,9 @@ footer .footer_container > div .bottom div .icons_bottom {
     gap: 24px;
     padding: 0;
   }
+  .cards .cards_container .card {
+    width: 340px;
+  }
 }
 .message {
   display: flex;
