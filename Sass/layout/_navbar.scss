@@ -1,6 +1,6 @@
 @import "../utils/mixins";
 nav {
-  border-bottom: 1px solid #eaebf0;
+  border-bottom: 1px solid $card_border;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: $background_neutral;

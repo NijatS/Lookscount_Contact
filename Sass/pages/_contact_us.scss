@@ -188,7 +188,7 @@
       textarea {
         transition: 0.3s;
         &:hover {
-          border-color: black;
+          border-color: $black;
         }
         &:focus {
           transform: scale(1.04);
@@ -232,7 +232,7 @@
         input {
           width: 20px;
           height: 20px;
-          border: 2px solid #dae0e6;
+          border: 2px solid $button_border_gray;
           border-radius: 5px;
         }
         label {
