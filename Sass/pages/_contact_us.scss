@@ -35,6 +35,23 @@
     }
   }
 }
+@media screen and (max-width: 1280px) {
+  .welcome {
+    padding: 48px 48px 40px;
+    .welcome_container {
+      width: 672px;
+      height: 196px;
+      padding: 0;
+      .welcome_text {
+        h1 {
+          span {
+            display: initial;
+          }
+        }
+      }
+    }
+  }
+}
 .cards {
   padding: 64px 0px;
   .cards_container {
@@ -42,6 +59,7 @@
     padding: 0px 32px;
     gap: 32px;
     flex-wrap: wrap;
+    justify-content: center;
     .card {
       &:first-child {
         height: 182px;
@@ -80,6 +98,16 @@
       &:hover {
         transform: scale(1.1);
       }
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .cards {
+    padding: 40px 32px;
+    .cards_container {
+      width: 100%;
+      gap: 24px;
+      padding: 0;
     }
   }
 }
@@ -142,6 +170,30 @@
     }
   }
 }
+@media screen and (max-width: 1280px) {
+  .message {
+    padding: 48px 32px;
+    .message_container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .submit {
+        width: 704px;
+        .input {
+          width: 308px;
+        }
+        .message_input {
+          width: 640px;
+        }
+        .agree {
+          label {
+            width: 608px;
+          }
+        }
+      }
+    }
+  }
+}
 .leftToRight {
   background-color: $background_gray;
   padding: 64px 0px;
@@ -177,8 +229,37 @@
       }
     }
     .right_side {
-      img {
+      & > img:first-child {
         width: 560px;
+      }
+      & > img:last-child {
+        width: 704px;
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .leftToRight {
+    padding: 40px 32px;
+    .leftTo_container {
+      width: 100%;
+      padding: 0;
+      gap: 48px;
+      flex-direction: column;
+      align-items: center;
+      .left_side {
+        .textLeft {
+          width: 704px;
+        }
+      }
+      .right_side {
+        & > img:first-child {
+          display: none;
+        }
+        & > img:last-child {
+          display: initial;
+        }
       }
     }
   }

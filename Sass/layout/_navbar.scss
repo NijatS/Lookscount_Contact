@@ -60,3 +60,33 @@ nav {
     }
   }
 }
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 704px;
+    padding: 0;
+  }
+  nav {
+    padding: 0;
+    .navbar_container {
+      padding: 0;
+      height: 64px;
+      .left_side_navbar {
+        img {
+          width: 128px;
+          height: 32px;
+        }
+        .navbar_links {
+          display: none;
+        }
+      }
+      .right_side_navbar {
+        & > .button {
+          display: none;
+        }
+        img {
+          display: initial;
+        }
+      }
+    }
+  }
+}
