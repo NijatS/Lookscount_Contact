@@ -1,9 +1,5 @@
 @import "../utils/mixins";
-.container {
-  padding: 0px 32px;
-  width: 1280px;
-  margin: auto;
-}
+
 .welcome {
   background-color: $background_neutral;
   .welcome_container {
@@ -142,6 +138,47 @@
       }
       button {
         @include buttons_form($button_blue_colors, $white);
+      }
+    }
+  }
+}
+.leftToRight {
+  background-color: $background_gray;
+  padding: 64px 0px;
+  display: flex;
+  justify-content: center;
+  .leftTo_container {
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    .left_side {
+      display: flex;
+      align-items: center;
+      .textLeft {
+        width: 516px;
+        & > p:first-child {
+          @include TextS;
+          color: $text_blue;
+          margin-bottom: 8px;
+        }
+        h2 {
+          @include HeadlineM;
+          color: $text_neutral_200;
+          margin-bottom: 16px;
+        }
+        & > p:nth-child(3) {
+          @include TextL;
+          color: $text_neutral;
+          margin-bottom: 40px;
+        }
+        button {
+          @include buttons_form($button_blue_colors, $white);
+        }
+      }
+    }
+    .right_side {
+      img {
+        width: 560px;
       }
     }
   }
