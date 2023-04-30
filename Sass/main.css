@@ -222,7 +222,12 @@ nav {
   border-color: #437ef7;
 }
 .navbar_container .right_side_navbar img {
+  cursor: pointer;
+  transition: 0.3s;
   display: none;
+}
+.navbar_container .right_side_navbar img:hover {
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 1280px) {
