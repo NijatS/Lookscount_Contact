@@ -192,6 +192,9 @@
         }
         &:focus {
           transform: scale(1.04);
+          &::placeholder {
+            color: transparent;
+          }
         }
       }
       .input {

@@ -2,8 +2,11 @@
 @import "./base/typrography";
 
 @import "./utils/colors";
+@import "./utils/mixins";
+
 @import "./components/buttons";
 @import "./components/inputs";
+
 @import "./layout/navbar";
 @import "./layout/footer";
 
